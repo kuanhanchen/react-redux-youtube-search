@@ -2,6 +2,10 @@
 
 React-Redux Calculator Modal
 
+## Live Demo
+
+https://kuanhanchen.github.io/react-redux-calculator/
+
 ## Extra Features
 
 - Test React components using React Testing Library.

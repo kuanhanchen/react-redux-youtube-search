@@ -7,6 +7,7 @@ React-Redux Youtube Search
 - Implement the functionality of Search using `React`, `Redux`, and `Hooks`.
   - Show 10 videos per page and limit 3 pages at the beginning.
   - Once the current page is on the last page, the 3rd page for example, have the next page (4th page) button in the pagination if there are more videos available.
+  - You would need to replace API_KEY in src/components/utilities/helper.js.
 - Persist the redux state by `redux-persist` after a refresh.
 - Have the responsive layout by `flexbox`.
 - Build pagination by `SCSS`.

@@ -1,27 +1,45 @@
 import * as actions from "../../../redux/actions";
-import { INPUT, OPERATOR, CLEAR } from "../../../redux/constant";
+import { SEARCH, SEARCH_TERM, SEARCH_TOKEN, SEARCH_CUR_PAGE, SEARCH_LAST_PAGE } from "../../../redux/constant";
 
 describe("actions", () => {
-  it("should create an action to input a value", () => {
-    const input = 1;
+  it("should create an action to store videos", () => {
+    const videos = [1];
     const expectedAction = {
-      type: INPUT,
-      input
+      type: SEARCH,
+      videos
     }
-    expect(actions.onInput(input)).toEqual(expectedAction);
+    expect(actions.onSearch([1])).toEqual(expectedAction);
   });
-  it("should create an action to add an operator", () => {
-    const operator = "+";
+  it("should create an action to store the term", () => {
+    const term = "abc";
     const expectedAction = {
-      type: OPERATOR,
-      operator
+      type: SEARCH_TERM,
+      term
     }
-    expect(actions.onOperate("+")).toEqual(expectedAction);
+    expect(actions.onSearchTerm(term)).toEqual(expectedAction);
   });
-  it("should create an action to clear all values", () => {
+  it("should create an action to store the pakeToken", () => {
+    const token = "abc";
     const expectedAction = {
-      type: CLEAR
+      type: SEARCH_TOKEN,
+      token
     }
-    expect(actions.onClear()).toEqual(expectedAction);
+    expect(actions.onSearchPageToken(token)).toEqual(expectedAction);
+  });
+  it("should create an action to store the current page", () => {
+    const curPage = 1;
+    const expectedAction = {
+      type: SEARCH_CUR_PAGE,
+      curPage
+    }
+    expect(actions.onSearchCurPage(curPage)).toEqual(expectedAction);
+  });
+  it("should create an action to store the last page", () => {
+    const lastPage = 1;
+    const expectedAction = {
+      type: SEARCH_LAST_PAGE,
+      lastPage
+    }
+    expect(actions.onSearchLastPage(lastPage)).toEqual(expectedAction);
   });
 });

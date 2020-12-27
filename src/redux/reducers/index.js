@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import calculator from "./calculator";
+import search from "./search";
 
 const rootReducer = combineReducers({
-  calculator
+  search
 });
 
 export default rootReducer;

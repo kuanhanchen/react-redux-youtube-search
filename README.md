@@ -1,27 +1,18 @@
 # Calculator
 
-React-Redux Calculator Modal
+React-Redux Youtube Search
 
-## Live Demo
+## Features
 
-https://kuanhanchen.github.io/react-redux-calculator/
-
-## Extra Features
-
-- Test React components using React Testing Library.
-- Test action creators and reducers using Jest.
-- Have style in SCSS.
-- Implement the functionality of AC button.
-
-## Uncertain Specs
-
-- Unknown font size, font-family, margin, and width in buttons.
-- Unknown style (height, border...) in a modal at desktop screen.
-- Unknown background color in the outside of the modal.
-- Unknown behavior once the result content exceeds the calculator div's width. 
-  - Have the result content scrollable if it's longer than the calculator width in the code.
-- Unknown behavior of the width of the modal if the screen width < 360px.
-  - Have max-width: 360px in the code
+- Implement the functionality of Search using `React`, `Redux`, and `Hooks`.
+  - Show 10 videos per page and limit 3 pages at the beginning.
+  - Once the current page is on the last page, the 3rd page for example, have the next page (4th page) button in the pagination if there are more videos available.
+- Persist the redux state by `redux-persist` after a refresh.
+- Have the responsive layout by `flexbox`.
+- Build pagination by `SCSS`.
+- Test React components using `React Testing Library`.
+- Test action creators and reducers using `Jest`.
+- Have style in `SCSS`.
 
 ## Available Scripts
 

@@ -1,7 +1,11 @@
-export const isMobile = () => {
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    return true;
-  }else{
-    return false;
-  }
+import { useEffect, useRef } from "react";
+
+export const usePrevious = value => {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
 }
+
+export const API_KEY = "YOUR_API_KEY";

@@ -5,24 +5,25 @@ import Home from "../../components/Home";
 
 describe("Home", () => {
   beforeEach(() => {
-    const { queryByTestId } = render(<Home />);
+    const { queryByTestId } = render(
+      <Home
+      onSearch={()=>{}}
+      onSearchTerm={()=>{}}
+      onSearchPageToken=""
+      onSearchCurPage=""
+      onSearchLastPage=""
+      term=""
+      videos={[]}
+      pageToken=""
+      curPage=""
+      lastPage=""
+      />
+    );
   });
 
-  it("should contain a button showing open calculator", () => {
-    expect(screen.getByRole("button", { name: /Open Calculator/i })).toBeInTheDocument();
-  });
-
-  it("should not contain a modal in the intial state", () => {
-    expect(screen.queryByTestId("modal")).toBeNull();
-  });
-  it("should contain a modal if the open calculator button is clicked", () => {
-    fireEvent.click(screen.getByRole("button", { name: /Open Calculator/i }));
-    expect(screen.queryByTestId("modal")).toBeTruthy();
-  });
-  it("should close a modal if the outside of the modal is clicked", () => {
-    fireEvent.click(screen.getByRole("button", { name: /Open Calculator/i }));
-    expect(screen.queryByTestId("modal")).toBeTruthy();
-    fireEvent.click(screen.queryByTestId("modal"));
-    expect(screen.queryByTestId("modal")).toBeNull();
+  it("should contain a title, YouTube Video Search", () => {
+    expect(
+      screen.getByText("YouTube Video Search")
+    ).toBeInTheDocument();
   });
 });

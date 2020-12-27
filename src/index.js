@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducers from './redux/reducers';
+import {PersistGate} from 'redux-persist/lib/integration/react';
+import store from './redux/store/store';
+import {persistor} from './redux/store/store';
 import './styles/index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <App />
+    </PersistGate>
+  </Provider>, document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -2,6 +2,7 @@
 
 React-Redux Youtube Search
 
+![demo]https://github.com/kuanhanchen/react-redux-youtube-search/blob/main/youtube_search_demo.gif
 ## Features
 
 - Implement the functionality of Search using `React`, `Redux`, and `Hooks`.
